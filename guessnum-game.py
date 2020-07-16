@@ -1,10 +1,10 @@
 import random
 import datetime
 
-pone=input('Give player one name \n')
-ptwo=input('Give player two name \n')
+pone=input('Give player one name \n') # Asks player's one name
+ptwo=input('Give player two name \n') # Asks player's two name
 
-chances=5
+chances=5 # Control the chances that players have to guess the exact number
 p1c=chances
 p2c=chances
 p1a=None #player 1 answer / guess
@@ -18,10 +18,9 @@ var=None
 closew=''
 pt=0
 
-guessnum=int(random.randint(100,1000)) #number that players are trying to guess
+guessnum=int(random.randint(100,1000)) # Set the range where the random number players are trying to guess will be generated
 
 def answerl():
-
     if num < guessnum:
         print('Guess higher \n')
         var = 0
@@ -31,8 +30,6 @@ def answerl():
     elif num == guessnum:
         var = 1
     return(var)
-
-
 
 while i < 2*chances:
 
@@ -73,17 +70,16 @@ while i < 2*chances:
 
     i=i+1
 
+# If no-one guesses the number then declare winner the player who guessed the closest
 if winner=='no-one':
     print('The correct answer was', guessnum)
     print('The closest answer was given by', closew, 'Number: ', closestn)
 else:
     print('The winner is:',winner)
 
-
-
 datetime_object = str(datetime.datetime.now())
 
-
+# Code below is to store game results and keep history in a txt - optional
 with open('resultsguess/results.txt', 'a+') as file:
     file.write(datetime_object)
     file.write('\n')
