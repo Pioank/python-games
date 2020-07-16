@@ -1,6 +1,6 @@
 # python-games
 
-In this repository I am placing some "silly" Python games that one can play in their CMD
+This repository contains 3 Python games that one can play in their CMD. 
 
 The games are:
 1) Hangman ( 2 players, one puts the word and how many chances to guess and the other user guesses )
